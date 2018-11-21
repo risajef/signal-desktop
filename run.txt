@@ -1,0 +1,5 @@
+build:
+docker build -t signal .
+run:
+docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd)/data:/home/developer/.config/Signal -v $(pwd)/share:/home/developer/share/ signal
+
